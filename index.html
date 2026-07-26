@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veluro – Le Fauteuil Bulle | Design Sculptural & Confort Cocon</title>
+<meta name="description" content="Découvrez le Veluro Fauteuil Bulle — design sculptural, tissu 3D respirant, confort cocon. Livraison internationale offerte en 3 à 5 jours. Satisfait ou remboursé 30 jours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & VARS ===== */
+:root{
+  --white:#fff;--bg:#fff;--bg-soft:#F7F7F7;--border:#E8E8E8;--border-dark:#D0D0D0;
+  --charcoal:#1A1A1A;--text:#1A1A1A;--text-muted:#6B6B6B;--text-light:#A0A0A0;
+  --accent:#E8471A;--accent-soft:#FFF0EB;--green:#2E7D52;
+  --r:8px;--rl:12px;--rxl:16px;
+  --shadow:0 2px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 40px rgba(0,0,0,.12);
+  --font:'Inter',-apple-system,sans-serif;--tr:all .2s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:15px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;font-family:var(--font)}
+
+/* ===== ANNOUNCE ===== */
+.announce-bar{background:var(--charcoal);color:#fff;text-align:center;font-size:13px;padding:10px 16px;line-height:1.4}
+.announce-bar strong{color:#FFD180}
+
+/* ===== HEADER ===== */
+.site-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:900}
+.header-inner{max-width:1240px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:21px;font-weight:700;letter-spacing:-.02em;color:var(--charcoal)}
+.logo span{color:var(--accent)}
+.header-nav{display:flex;gap:24px;list-style:none}
+.header-nav a{font-size:13px;font-weight:500;color:var(--text-muted);transition:var(--tr)}
+.header-nav a:hover{color:var(--text)}
+.cart-icon-btn{background:none;border:1.5px solid var(--border-dark);border-radius:var(--r);padding:8px 14px;font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px;transition:var(--tr);white-space:nowrap}
+.cart-icon-btn:hover{border-color:var(--charcoal);background:var(--charcoal);color:#fff}
+.cart-count-badge{background:var(--accent);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* ===== PRODUCT LAYOUT ===== */
+.product-wrap{max-width:1240px;margin:0 auto;padding:36px 20px 64px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
+
+/* ===== GALLERY ===== */
+.gallery{position:sticky;top:72px}
+.gallery-main-img{border-radius:var(--rxl);overflow:hidden;background:var(--bg-soft);aspect-ratio:1/1;position:relative}
+.gallery-main-img img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}
+.sale-badge{position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:4px 9px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+.gallery-thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.gallery-thumbs::-webkit-scrollbar{display:none}
+.thumb{width:62px;height:62px;border-radius:var(--r);overflow:hidden;flex-shrink:0;border:2px solid transparent;cursor:pointer;transition:var(--tr);background:var(--bg-soft)}
+.thumb.active,.thumb:hover{border-color:var(--charcoal)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+
+/* ===== PRODUCT INFO ===== */
+.product-tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:10px}
+.product-title{font-size:28px;font-weight:700;line-height:1.15;color:var(--charcoal);letter-spacing:-.02em;margin-bottom:10px}
+.review-row{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.stars{color:#F4B942;font-size:14px;letter-spacing:1px}
+.review-text{font-size:13px;color:var(--text-muted)}
+.review-text a{color:var(--charcoal);text-decoration:underline;text-underline-offset:2px}
+
+/* ===== PRICE ===== */
+.price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.price-now{font-size:26px;font-weight:700;color:var(--charcoal);letter-spacing:-.02em}
+.price-was{font-size:15px;color:var(--text-light);text-decoration:line-through}
+.price-save-pill{background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px}
+.price-sub{font-size:12px;color:var(--text-muted);margin-bottom:18px}
+
+/* ===== STOCK ===== */
+.stock-bar{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--r);padding:10px 14px;display:flex;align-items:center;gap:9px;margin-bottom:18px;font-size:13px;font-weight:500}
+.stock-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ===== COUNTDOWN ===== */
+.countdown-bar{background:var(--charcoal);color:#fff;border-radius:var(--r);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;font-size:13px;flex-wrap:wrap;gap:8px}
+.cd-label{color:rgba(255,255,255,.65);font-size:12px}
+.cd-units{display:flex;align-items:center;gap:5px}
+.cd-block{background:rgba(255,255,255,.1);padding:4px 8px;border-radius:4px;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;min-width:34px;text-align:center}
+.cd-sep{font-size:16px;font-weight:700;color:var(--accent)}
+
+/* ===== SWATCHES PRINCIPAL ===== */
+.opt-label{font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.opt-label span{color:var(--charcoal);font-weight:600}
+.swatches{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+.swatch{width:32px;height:32px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:var(--tr);box-shadow:0 0 0 1px rgba(0,0,0,.1);position:relative;flex-shrink:0}
+.swatch:active{transform:scale(.95)}
+.swatch.active{border-color:var(--charcoal);box-shadow:0 0 0 3px var(--white),0 0 0 5px var(--charcoal)}
+/* tooltip desktop seulement */
+@media(hover:hover){
+  .swatch[title]::after{content:attr(title);position:absolute;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);background:var(--charcoal);color:#fff;font-size:10px;padding:3px 8px;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s}
+  .swatch:hover::after{opacity:1}
+  .swatch:hover{transform:scale(1.1)}
+}
+
+/* ===== BUNDLES ===== */
+.bundles-label{font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.bundle-cards{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+
+/* Carte bundle de base */
+.bundle-card{border:1.5px solid var(--border);border-radius:var(--rl);overflow:hidden;cursor:pointer;transition:var(--tr);background:var(--white);position:relative}
+.bundle-card:hover{border-color:var(--charcoal)}
+.bundle-card.selected{border-color:var(--charcoal);border-width:2px}
+.bundle-card-top{display:flex;align-items:center}
+.bundle-card-radio-col{padding:0 12px;flex-shrink:0;display:flex;align-items:center}
+.bundle-radio-circle{width:20px;height:20px;border-radius:50%;border:2px solid var(--border-dark);display:flex;align-items:center;justify-content:center;transition:var(--tr);flex-shrink:0}
+.bundle-card.selected .bundle-radio-circle{border-color:var(--charcoal);background:var(--charcoal)}
+.bundle-card.selected .bundle-radio-circle::after{content:'';width:7px;height:7px;background:#fff;border-radius:50%}
+.bundle-card-img{width:78px;height:78px;flex-shrink:0;background:var(--bg-soft);overflow:hidden}
+.bundle-card-img img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}
+.bundle-card-body{flex:1;padding:12px 12px;min-width:0}
+.bundle-card-name{font-size:13.5px;font-weight:600;color:var(--charcoal);margin-bottom:2px}
+.bundle-card-desc{font-size:12px;color:var(--text-muted);line-height:1.35}
+.bundle-card-price-col{padding:0 14px;text-align:right;flex-shrink:0}
+.bundle-card-price-now{font-size:16px;font-weight:700;color:var(--charcoal);white-space:nowrap}
+.bundle-card-price-was{font-size:11.5px;color:var(--text-light);text-decoration:line-through;white-space:nowrap}
+.bundle-card-badge{position:absolute;top:0;right:0;background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:0 var(--rl) 0 var(--r);text-transform:uppercase;letter-spacing:.04em}
+
+/* Sélecteur coloris dans le bundle (Duo & Trio) */
+.bundle-color-picker{
+  border-top:1px solid var(--border);
+  padding:10px 14px;
+  display:none; /* caché sauf si bundle sélectionné */
+  flex-direction:column;
+  gap:8px;
+  background:var(--bg-soft);
+}
+.bundle-card.selected .bundle-color-picker{display:flex}
+.bcp-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.bcp-label{font-size:11.5px;font-weight:600;color:var(--text-muted);white-space:nowrap;min-width:80px}
+.bcp-swatches{display:flex;gap:6px;flex-wrap:wrap}
+.bcp-swatch{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:var(--tr);box-shadow:0 0 0 1px rgba(0,0,0,.1);flex-shrink:0}
+.bcp-swatch.active{border-color:var(--charcoal);box-shadow:0 0 0 2px var(--white),0 0 0 4px var(--charcoal)}
+.bcp-swatch:active{transform:scale(.9)}
+.bcp-color-name{font-size:11px;color:var(--text-muted);margin-left:4px}
+
+/* ===== BUTTONS ===== */
+.btn-atc{width:100%;background:var(--charcoal);color:#fff;padding:16px 24px;border-radius:var(--r);font-size:15px;font-weight:700;letter-spacing:.02em;transition:var(--tr);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:9px}
+.btn-atc:hover{background:#333;transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.btn-atc:active{transform:translateY(0)}
+
+/* ===== REASSURANCE ===== */
+.reasur-strip{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.reasur-item{display:flex;align-items:flex-start;gap:9px;background:var(--bg-soft);border:1px solid var(--border);padding:10px 12px;border-radius:var(--rl)}
+.reasur-icon{font-size:17px;flex-shrink:0;margin-top:1px}
+.reasur-title{font-size:12px;font-weight:600;color:var(--charcoal);line-height:1.3}
+.reasur-sub{font-size:11px;color:var(--text-muted)}
+.pay-row{border-top:1px solid var(--border);padding-top:12px;text-align:center}
+.pay-row p{font-size:11px;color:var(--text-light);margin-bottom:7px}
+.pay-icons{display:flex;justify-content:center;gap:5px;flex-wrap:wrap}
+.pay-chip{background:var(--bg-soft);border:1px solid var(--border);border-radius:4px;padding:4px 8px;font-size:10.5px;font-weight:600;color:var(--text-muted)}
+
+/* ===== SECTIONS ===== */
+.sw{max-width:1100px;margin:0 auto}
+.s-eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);text-align:center;margin-bottom:8px}
+.s-title{font-size:32px;font-weight:700;letter-spacing:-.02em;text-align:center;color:var(--charcoal);margin-bottom:10px;line-height:1.2}
+.s-sub{text-align:center;color:var(--text-muted);font-size:15px;margin-bottom:48px;max-width:480px;margin-left:auto;margin-right:auto}
+.section-features{background:var(--white);padding:72px 20px;border-top:1px solid var(--border)}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 48px}
+.feat-item{display:flex;gap:16px;align-items:flex-start}
+.feat-icon-wrap{width:42px;height:42px;background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--rl);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.feat-item h3{font-size:15px;font-weight:700;color:var(--charcoal);margin-bottom:4px}
+.feat-item p{font-size:13.5px;color:var(--text-muted);line-height:1.6}
+
+/* ===== COMPARISON ===== */
+.section-comparison{background:var(--bg-soft);padding:72px 20px;border-top:1px solid var(--border)}
+.comparison-tbl{width:100%;border-collapse:collapse;margin-top:36px;border-radius:var(--rxl);overflow:hidden;box-shadow:var(--shadow)}
+.comparison-tbl thead th{padding:16px 18px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.comparison-tbl thead th:first-child{background:var(--bg-soft);text-align:left;color:var(--text-muted);width:28%}
+.comparison-tbl thead th:nth-child(2){background:var(--charcoal);color:#fff}
+.comparison-tbl thead th:nth-child(3){background:var(--border);color:var(--text-muted)}
+.comparison-tbl tbody tr td{padding:13px 18px;font-size:13px;border-top:1px solid var(--border)}
+.comparison-tbl tbody tr td:first-child{font-weight:600;color:var(--text-muted);background:var(--white)}
+.comparison-tbl tbody tr td:nth-child(2){background:#F5F5F5;color:var(--charcoal)}
+.comparison-tbl tbody tr td:nth-child(3){background:var(--white);color:var(--text-light)}
+.ok{color:var(--green);font-weight:700;margin-right:4px}
+.ko{color:var(--accent);margin-right:4px}
+
+/* ===== PROCESS ===== */
+.section-process{background:var(--charcoal);padding:72px 20px}
+.section-process .s-eyebrow{color:rgba(255,255,255,.4)}
+.section-process .s-title{color:#fff}
+.section-process .s-sub{color:rgba(255,255,255,.45)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:860px;margin:0 auto}
+.step{text-align:center}
+.step-n{font-size:44px;font-weight:800;color:rgba(255,255,255,.08);line-height:1;margin-bottom:12px}
+.step h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:7px}
+.step p{font-size:13.5px;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* ===== REVIEWS ===== */
+.section-reviews{background:var(--white);padding:72px 20px;border-top:1px solid var(--border)}
+.rating-hero{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:44px;flex-wrap:wrap}
+.rating-num{font-size:60px;font-weight:800;color:var(--charcoal);letter-spacing:-.04em;line-height:1}
+.rating-info .stars{font-size:20px;margin-bottom:4px}
+.rating-info p{font-size:13px;color:var(--text-muted)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.review-card{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--rxl);padding:20px}
+.review-stars{color:#F4B942;font-size:13px;margin-bottom:9px}
+.review-body{font-size:13.5px;color:var(--text);line-height:1.65;margin-bottom:13px}
+.reviewer{display:flex;align-items:center;gap:10px}
+.reviewer-avatar{width:32px;height:32px;background:var(--charcoal);color:#fff;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.reviewer-name{font-size:12.5px;font-weight:600;color:var(--charcoal)}
+.reviewer-loc{font-size:11.5px;color:var(--text-light)}
+.verified{font-size:11px;color:var(--green);font-weight:500}
+
+/* ===== FAQ ===== */
+.section-faq{background:var(--bg-soft);padding:72px 20px;border-top:1px solid var(--border)}
+.faq-list{max-width:680px;margin:36px auto 0}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14.5px;font-weight:500;color:var(--charcoal);text-align:left;gap:16px;cursor:pointer;transition:var(--tr)}
+.faq-q:hover{color:var(--accent)}
+.faq-icon{font-size:22px;color:var(--text-light);flex-shrink:0;transition:var(--tr);line-height:1}
+.faq-a{font-size:13.5px;color:var(--text-muted);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:16px}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:var(--accent)}
+
+/* ===== CTA BANNER ===== */
+.section-cta-banner{background:var(--charcoal);padding:72px 20px;text-align:center}
+.section-cta-banner h2{font-size:36px;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:12px;line-height:1.15}
+.section-cta-banner h2 em{color:var(--accent);font-style:normal}
+.section-cta-banner p{color:rgba(255,255,255,.5);font-size:15px;margin-bottom:26px}
+.cta-big-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--charcoal);padding:16px 40px;border-radius:var(--r);font-size:15px;font-weight:700;transition:var(--tr);cursor:pointer;border:none;font-family:var(--font)}
+.cta-big-btn:hover{background:var(--accent);color:#fff;transform:translateY(-1px)}
+.cta-trust-row{display:flex;justify-content:center;gap:24px;margin-top:24px;flex-wrap:wrap}
+.cta-trust-item{color:rgba(255,255,255,.4);font-size:13px;display:flex;align-items:center;gap:5px}
+
+/* ===== FOOTER ===== */
+.site-footer{background:#111;color:rgba(255,255,255,.4);padding:48px 20px 26px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand-logo{font-size:19px;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:9px}
+.footer-brand-logo span{color:var(--accent)}
+.footer-brand-desc{font-size:12.5px;line-height:1.6;max-width:210px}
+.footer-col h4{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:12px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:7px}
+.footer-col a{font-size:12.5px;color:rgba(255,255,255,.35);transition:var(--tr)}
+.footer-col a:hover{color:rgba(255,255,255,.8)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11.5px}
+.footer-legal{display:flex;gap:16px;flex-wrap:wrap}
+.footer-legal a{color:rgba(255,255,255,.25)}
+.footer-legal a:hover{color:rgba(255,255,255,.6)}
+
+/* ===== CART DRAWER ===== */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9990;opacity:0;pointer-events:none;transition:opacity .25s}
+.cart-overlay.open{opacity:1;pointer-events:all}
+.cart-drawer{position:fixed;top:0;right:0;width:400px;max-width:100vw;height:100vh;background:var(--white);z-index:9991;transform:translateX(100%);transition:transform .3s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.12)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-hd{padding:18px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.cart-hd-title{font-size:17px;font-weight:700;color:var(--charcoal)}
+.cart-close-btn{background:none;border:none;font-size:22px;color:var(--text-muted);padding:4px;cursor:pointer;line-height:1}
+.cart-urgency{background:var(--accent-soft);border-bottom:1px solid #fcd5c5;padding:9px 20px;font-size:12px;font-weight:500;color:var(--accent);display:flex;align-items:center;gap:7px}
+.cart-urgency .fire{animation:wiggle 1s ease-in-out infinite}
+@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+.cart-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.cart-empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px;text-align:center;color:var(--text-muted)}
+.cart-empty-state .empty-ico{font-size:40px;opacity:.25;margin-bottom:12px}
+.cart-empty-state h4{font-size:16px;font-weight:700;color:var(--charcoal);margin-bottom:6px}
+.cart-items-list{padding:10px 20px}
+.cart-li{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--border);align-items:center}
+.cart-li-img{width:64px;height:64px;border-radius:var(--r);background:var(--bg-soft);overflow:hidden;flex-shrink:0}
+.cart-li-img img{width:100%;height:100%;object-fit:cover}
+.cart-li-info{flex:1;min-width:0}
+.cart-li-name{font-size:13px;font-weight:600;color:var(--charcoal);margin-bottom:3px}
+.cart-li-variant{font-size:11.5px;color:var(--text-muted);margin-bottom:7px}
+.cart-li-qty{display:flex;align-items:center;gap:8px}
+.qty-btn{width:26px;height:26px;border:1px solid var(--border-dark);background:var(--white);border-radius:4px;font-size:15px;line-height:1;color:var(--charcoal);display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.qty-btn:hover{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+.qty-v{font-size:14px;font-weight:600;min-width:18px;text-align:center}
+.cart-li-price{font-size:15px;font-weight:700;color:var(--charcoal);flex-shrink:0}
+.cart-ft{padding:16px 20px;border-top:1px solid var(--border)}
+.cart-ft-reasur{display:flex;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:5px}
+.cart-ft-ri{font-size:11px;color:var(--text-muted)}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-top:1px solid var(--border);margin-bottom:5px}
+.cart-total-lbl{font-size:14px;font-weight:700;color:var(--charcoal)}
+.cart-total-val{font-size:21px;font-weight:800;color:var(--charcoal);letter-spacing:-.02em}
+.cart-ship-note{font-size:11.5px;color:var(--green);font-weight:500;margin-bottom:12px}
+.checkout-btn{width:100%;background:var(--charcoal);color:#fff;padding:16px;border-radius:var(--r);font-size:14.5px;font-weight:700;transition:var(--tr);margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:9px}
+.checkout-btn:hover{background:#333}
+.checkout-sub{font-size:11.5px;color:var(--text-light);text-align:center}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--charcoal);color:#fff;padding:12px 20px;border-radius:var(--rl);font-size:13.5px;font-weight:500;z-index:9999;display:flex;align-items:center;gap:9px;box-shadow:var(--shadow-lg);white-space:nowrap;transition:transform .4s cubic-bezier(.34,1.56,.64,1);max-width:90vw}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast-ico{color:#4CAF50;font-size:16px}
+
+/* ===================================================
+   RESPONSIVE — MOBILE FIRST
+   Priorité mobile, desktop par dessus
+=================================================== */
+
+/* ── MOBILE (< 768px) ── */
+@media(max-width:767px){
+  /* Layout produit empilé */
+  .product-wrap{grid-template-columns:1fr;gap:0;padding:0 0 56px}
+
+  /* Galerie plein écran */
+  .gallery{position:static}
+  .gallery-main-img{border-radius:0;aspect-ratio:4/3}
+  .sale-badge{top:10px;left:10px;font-size:10px;padding:3px 8px}
+  .gallery-thumbs{padding:10px 14px 2px;gap:7px}
+  .thumb{width:56px;height:56px}
+
+  /* Info produit padding mobile */
+  .product-info{padding:18px 16px 0}
+  .product-title{font-size:22px}
+  .price-now{font-size:24px}
+
+  /* Countdown full width */
+  .countdown-bar{justify-content:center;gap:12px}
+
+  /* Swatches plus grandes = plus faciles à tapper */
+  .swatch{width:36px;height:36px}
+  .bcp-swatch{width:30px;height:30px}
+
+  /* Bundles */
+  .bundle-card-img{width:68px;height:68px}
+  .bundle-card-name{font-size:13px}
+  .bundle-card-price-now{font-size:15px}
+  .bundle-card-body{padding:10px 10px}
+  .bundle-card-price-col{padding:0 10px}
+
+  /* Bouton ATC full */
+  .btn-atc{font-size:16px;padding:18px;border-radius:0;margin-bottom:0;position:fixed;bottom:0;left:0;right:0;z-index:800;border-radius:0}
+
+  /* Padding bas pour pas masquer contenu sous le bouton fixe */
+  .product-info{padding-bottom:72px}
+
+  /* Reassurance 1 col */
+  .reasur-strip{grid-template-columns:1fr 1fr}
+
+  /* Header compact */
+  .header-nav{display:none}
+  .header-inner{padding:0 14px}
+  .logo{font-size:19px}
+
+  /* Sections */
+  .section-features,.section-comparison,.section-process,.section-reviews,.section-faq,.section-cta-banner{padding:48px 16px}
+  .s-title{font-size:22px}
+  .s-sub{font-size:14px;margin-bottom:32px}
+  .feat-grid{grid-template-columns:1fr;gap:22px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .section-cta-banner h2{font-size:22px}
+  .cta-trust-row{gap:14px}
+  .cta-trust-item{font-size:12px}
+
+  /* Comparison table scroll horizontal */
+  .section-comparison .sw{overflow-x:auto}
+  .comparison-tbl{min-width:500px;font-size:12px}
+  .comparison-tbl thead th,.comparison-tbl tbody tr td{padding:10px 12px}
+
+  /* Reviews 1 col */
+  .reviews-grid{grid-template-columns:1fr}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-brand-desc{max-width:none}
+
+  /* Cart full width */
+  .cart-drawer{width:100vw}
+}
+
+/* ── TABLETTE (768px – 959px) ── */
+@media(min-width:768px) and (max-width:959px){
+  .product-wrap{grid-template-columns:1fr;gap:28px;padding:24px 20px 56px}
+  .gallery{position:static}
+  .gallery-main-img{aspect-ratio:4/3;border-radius:var(--rxl)}
+  .header-nav{display:none}
+  .feat-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .steps{grid-template-columns:1fr;gap:24px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+  .section-cta-banner h2{font-size:28px}
+  .s-title{font-size:26px}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+}
+
+/* ── DESKTOP (>= 960px) ── */
+@media(min-width:960px){
+  /* Tout est déjà correct dans les styles de base */
+  .reasur-strip{grid-template-columns:1fr 1fr}
+}
+
+/* ── LARGE (>= 1200px) ── */
+@media(min-width:1200px){
+  .product-title{font-size:30px}
+  .s-title{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<div class="announce-bar">
+  🚚 <strong>Livraison internationale offerte</strong> · Suivi en temps réel · 3 à 5 jours · <strong>Satisfait ou remboursé 30 jours</strong>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">Veluro<span>.</span></a>
+    <nav><ul class="header-nav">
+      <li><a href="#produit">Fauteuil</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul></nav>
+    <button class="cart-icon-btn" onclick="openCart()">
+      🛒 Panier <span class="cart-count-badge" id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ PRODUCT ============ -->
+<div class="product-wrap" id="produit">
+
+  <div class="gallery">
+    <div class="gallery-main-img">
+      <span class="sale-badge">Soldes −38%</span>
+      <img id="main-img" src="images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg" alt="Veluro Fauteuil Bulle">
+    </div>
+    <div class="gallery-thumbs" id="gallery-thumbs"></div>
+  </div>
+
+  <div class="product-info">
+    <span class="product-tag">Édition Signature</span>
+    <h1 class="product-title">Veluro Fauteuil Bulle</h1>
+
+    <div class="review-row">
+      <span class="stars">★★★★★</span>
+      <span class="review-text">Excellent · <a href="#avis">1 240 avis</a> Trustpilot</span>
+    </div>
+
+    <div class="price-row">
+      <span class="price-now" id="disp-price">49,90€</span>
+      <span class="price-was" id="disp-was">79,90€</span>
+      <span class="price-save-pill">Économisez 30,00€</span>
+    </div>
+    <p class="price-sub">Prix TTC · Livraison offerte</p>
+
+    <div class="stock-bar">
+      <span class="stock-dot"></span>
+      Seulement <strong style="margin:0 3px">7 unités</strong> restantes — commandez avant rupture
+    </div>
+
+    <div class="countdown-bar">
+      <span class="cd-label">⏳ L'offre expire dans</span>
+      <div class="cd-units">
+        <span class="cd-block" id="cd-h">02</span>
+        <span class="cd-sep">:</span>
+        <span class="cd-block" id="cd-m">47</span>
+        <span class="cd-sep">:</span>
+        <span class="cd-block" id="cd-s">33</span>
+      </div>
+    </div>
+
+    <!-- Coloris principal -->
+    <div>
+      <p class="opt-label">Coloris : <span id="sel-color">Blanc Ivoire</span></p>
+      <div class="swatches" id="swatches-container"></div>
+    </div>
+
+    <!-- Bundles -->
+    <div id="collection">
+      <p class="bundles-label">Choisissez votre configuration</p>
+      <div class="bundle-cards">
+
+        <!-- Bundle 1 : Fauteuil Seul -->
+        <div class="bundle-card selected" data-bundle="1" onclick="pickBundle(this,49.90,79.90,'Fauteuil Seul',1)">
+          <div class="bundle-card-top">
+            <div class="bundle-card-radio-col"><div class="bundle-radio-circle"></div></div>
+            <div class="bundle-card-img"><img id="bundle-img-1" src="images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg" alt="Fauteuil Seul"></div>
+            <div class="bundle-card-body">
+              <div class="bundle-card-name">Veluro Fauteuil Seul</div>
+              <div class="bundle-card-desc">1 fauteuil · coloris au choix</div>
+            </div>
+            <div class="bundle-card-price-col">
+              <div class="bundle-card-price-now">49,90€</div>
+              <div class="bundle-card-price-was">79,90€</div>
+            </div>
+          </div>
+          <!-- Pas de sélecteur supplémentaire pour le bundle 1 -->
+        </div>
+
+        <!-- Bundle 2 : Duo -->
+        <div class="bundle-card" data-bundle="2" onclick="pickBundle(this,89.90,149.80,'Duo de Fauteuils',2)">
+          <span class="bundle-card-badge">⭐ Populaire</span>
+          <div class="bundle-card-top">
+            <div class="bundle-card-radio-col"><div class="bundle-radio-circle"></div></div>
+            <div class="bundle-card-img"><img id="bundle-img-2" src="images/2_4ee2cf36-3927-4d6a-b4e1-0d4a8931a32f.webp" alt="Duo"></div>
+            <div class="bundle-card-body">
+              <div class="bundle-card-name">Veluro Duo de Fauteuils</div>
+              <div class="bundle-card-desc">2 fauteuils · coloris au choix</div>
+            </div>
+            <div class="bundle-card-price-col">
+              <div class="bundle-card-price-now">89,90€</div>
+              <div class="bundle-card-price-was">149,80€</div>
+            </div>
+          </div>
+          <!-- Sélecteur coloris pour les 2 fauteuils -->
+          <div class="bundle-color-picker" id="bcp-2">
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 1 :</span>
+              <div class="bcp-swatches" id="bcp-2-1"></div>
+              <span class="bcp-color-name" id="bcp-2-1-name"></span>
+            </div>
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 2 :</span>
+              <div class="bcp-swatches" id="bcp-2-2"></div>
+              <span class="bcp-color-name" id="bcp-2-2-name"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle 3 : Trio -->
+        <div class="bundle-card" data-bundle="3" onclick="pickBundle(this,129.90,229.70,'Trio Salon Complet',3)">
+          <span class="bundle-card-badge">🔥 Meilleure offre</span>
+          <div class="bundle-card-top">
+            <div class="bundle-card-radio-col"><div class="bundle-radio-circle"></div></div>
+            <div class="bundle-card-img"><img id="bundle-img-3" src="images/3_8e96b065-5b8a-4e2c-81e5-0f897508c029.webp" alt="Trio"></div>
+            <div class="bundle-card-body">
+              <div class="bundle-card-name">Veluro Trio Salon Complet</div>
+              <div class="bundle-card-desc">3 fauteuils · coloris au choix</div>
+            </div>
+            <div class="bundle-card-price-col">
+              <div class="bundle-card-price-now">129,90€</div>
+              <div class="bundle-card-price-was">229,70€</div>
+            </div>
+          </div>
+          <!-- Sélecteur coloris pour les 3 fauteuils -->
+          <div class="bundle-color-picker" id="bcp-3">
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 1 :</span>
+              <div class="bcp-swatches" id="bcp-3-1"></div>
+              <span class="bcp-color-name" id="bcp-3-1-name"></span>
+            </div>
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 2 :</span>
+              <div class="bcp-swatches" id="bcp-3-2"></div>
+              <span class="bcp-color-name" id="bcp-3-2-name"></span>
+            </div>
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 3 :</span>
+              <div class="bcp-swatches" id="bcp-3-3"></div>
+              <span class="bcp-color-name" id="bcp-3-3-name"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bouton ATC unique -->
+    <button class="btn-atc" onclick="addToCart()">🛒 Ajouter au panier</button>
+
+    <div class="reasur-strip">
+      <div class="reasur-item"><div class="reasur-icon">🚚</div><div><div class="reasur-title">Livraison offerte</div><div class="reasur-sub">International · 3–5 jours</div></div></div>
+      <div class="reasur-item"><div class="reasur-icon">📍</div><div><div class="reasur-title">Suivi en temps réel</div><div class="reasur-sub">SMS + Email inclus</div></div></div>
+      <div class="reasur-item"><div class="reasur-icon">↩️</div><div><div class="reasur-title">30J satisfait ou remboursé</div><div class="reasur-sub">Sans questions</div></div></div>
+      <div class="reasur-item"><div class="reasur-icon">🔒</div><div><div class="reasur-title">Paiement sécurisé</div><div class="reasur-sub">SSL · 3D Secure</div></div></div>
+    </div>
+
+    <div class="pay-row">
+      <p>Paiement 100% sécurisé</p>
+      <div class="pay-icons">
+        <span class="pay-chip">VISA</span><span class="pay-chip">Mastercard</span><span class="pay-chip">AMEX</span>
+        <span class="pay-chip">PayPal</span><span class="pay-chip">Apple Pay</span><span class="pay-chip">Google Pay</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section-features">
+  <div class="sw">
+    <p class="s-eyebrow">Construit dans chaque détail</p>
+    <h2 class="s-title">Ce que vous ressentez dès les premières secondes</h2>
+    <p class="s-sub">Quatre éléments que vous percevez au moment où vous vous installez.</p>
+    <div class="feat-grid">
+      <div class="feat-item"><div class="feat-icon-wrap">🧵</div><div><h3>Tissu 3D Polyamide Respirant</h3><p>Notre tissu Techno 3D mêle polyamide et polyester pour un rendu couture. Respirant et résistant, il épouse chaque courbe et reste confortable lors d'un usage quotidien intensif.</p></div></div>
+      <div class="feat-item"><div class="feat-icon-wrap">🫁</div><div><h3>Dossier Ergonomique Aligné</h3><p>Le dossier capitonné suit la courbure naturelle de votre colonne. Les accoudoirs arrondis répartissent la pression pour que les longues soirées ne vous laissent jamais raide.</p></div></div>
+      <div class="feat-item"><div class="feat-icon-wrap">🔵</div><div><h3>Silhouette Ronde Sculptée</h3><p>Chaque courbe est pensée pour un confort cocon. Le profil rond se sent généreux et accueillant dans n'importe quelle pièce — il s'intègre partout.</p></div></div>
+      <div class="feat-item"><div class="feat-icon-wrap">💎</div><div><h3>Mousse Mémoire Multi-Couches</h3><p>Des couches de mousse mémoire et de fibres élastiques délivrent un confort moelleux avec un vrai soutien. La structure conserve sa forme à chaque utilisation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section-comparison">
+  <div class="sw">
+    <p class="s-eyebrow">Veluro vs un canapé classique</p>
+    <h2 class="s-title">La différence se ressent dès le premier jour</h2>
+    <table class="comparison-tbl">
+      <thead><tr>
+        <th>Ce qui compte</th><th>✦ Veluro Fauteuil Bulle</th><th>Canapé ordinaire</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Confort</td><td><span class="ok">✓</span>Mousse bulle dense, cloud-soft des années</td><td><span class="ko">✗</span>S'affaisse en quelques mois</td></tr>
+        <tr><td>Design</td><td><span class="ok">✓</span>Silhouette sculpturale qui ancre la pièce</td><td><span class="ko">✗</span>Forme générique vue mille fois</td></tr>
+        <tr><td>Entretien</td><td><span class="ok">✓</span>Housses dézippables, lavage machine</td><td><span class="ko">✗</span>Nettoyage pro obligatoire</td></tr>
+        <tr><td>Livraison</td><td><span class="ok">✓</span>Colis compact, montage 10 min</td><td><span class="ko">✗</span>Deux personnes minimum</td></tr>
+        <tr><td>Matériaux</td><td><span class="ok">✓</span>Tissu premium, coutures cachées</td><td><span class="ko">✗</span>Coutures visibles qui s'effilochent</td></tr>
+        <tr><td>Usage quotidien</td><td><span class="ok">✓</span>Résistant enfants et animaux</td><td><span class="ko">✗</span>Impeccable jusqu'au premier renversement</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-process">
+  <div class="sw">
+    <p class="s-eyebrow">Simple, rapide, sans stress</p>
+    <h2 class="s-title">Votre Veluro en 3 étapes</h2>
+    <p class="s-sub">De la commande à votre salon.</p>
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><h3>Vous configurez</h3><p>Choisissez votre coloris et votre quantité directement sur la fiche produit.</p></div>
+      <div class="step"><div class="step-n">02</div><h3>Nous expédions</h3><p>Livraison suivie directement à votre porte en 3 à 5 jours ouvrés, partout dans le monde.</p></div>
+      <div class="step"><div class="step-n">03</div><h3>Vous profitez</h3><p>Sans outil, en moins de 10 minutes. Il ne reste plus qu'à s'y installer.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section-reviews" id="avis">
+  <div class="sw">
+    <p class="s-eyebrow">Ce qu'ils en pensent</p>
+    <h2 class="s-title">Ils ont choisi Veluro</h2>
+    <div class="rating-hero">
+      <div class="rating-num">4,9</div>
+      <div class="rating-info"><div class="stars">★★★★★</div><p>Basé sur 1 240+ avis vérifiés</p></div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Je l'ai acheté pour le design, honnêtement. Il s'avère être le siège le plus confortable de l'appartement."</p><div class="reviewer"><div class="reviewer-avatar">C</div><div><div class="reviewer-name">Camille L. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Paris · Blanc Ivoire</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Monté seul en moins de dix minutes. Les housses en machine, c'est ce qui m'a convaincu — avec deux chats, rien ne reste propre longtemps."</p><div class="reviewer"><div class="reviewer-avatar">T</div><div><div class="reviewer-name">Thomas R. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Lyon · Gris Anthracite</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"C'est le premier truc que chaque invité commente. L'emballage était impeccable, arrivé bien avant la fenêtre annoncée."</p><div class="reviewer"><div class="reviewer-avatar">S</div><div><div class="reviewer-name">Sophie M. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Bordeaux · Rose Poudré</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Trois mois après, aucun affaissement. La mousse revient vraiment à chaque fois — c'est ce qui avait tué mes deux derniers canapés."</p><div class="reviewer"><div class="reviewer-avatar">P</div><div><div class="reviewer-name">Pierre N. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Marseille · Bleu Océan</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Deux enfants, des collations en continu, une housse déjà lavée et elle ressort comme neuve."</p><div class="reviewer"><div class="reviewer-avatar">J</div><div><div class="reviewer-name">Julie O. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Nantes · Vert Sauge</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Le tissu donne une impression beaucoup plus chère que le prix. Les coutures sont cachées et rien n'a boulochné après des mois."</p><div class="reviewer"><div class="reviewer-avatar">N</div><div><div class="reviewer-name">Nora B. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Toulouse · Jaune Soleil</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-faq" id="faq">
+  <div class="sw">
+    <p class="s-eyebrow">Questions fréquentes</p>
+    <h2 class="s-title">Tout ce que vous voulez savoir</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Est-il aussi confortable qu'il en a l'air ?<span class="faq-icon">+</span></button><div class="faq-a">Oui. Une mousse haute densité sous un rembourrage bulle doux conserve sa forme tout en restant profond et moelleux comme un nuage.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quel est le délai de livraison ?<span class="faq-icon">+</span></button><div class="faq-a">3 à 5 jours ouvrés quelle que soit votre adresse. Livraison gratuite, suivi SMS et email inclus.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Comment nettoyer les housses ?<span class="faq-icon">+</span></button><div class="faq-a">Toutes les housses sont entièrement amovibles et lavables en machine à 30°C. Séchage à l'air libre, jamais au sèche-linge.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Le montage est-il compliqué ?<span class="faq-icon">+</span></button><div class="faq-a">Aucun outil nécessaire. Comptez moins de 10 minutes même seul.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Puis-je le retourner si je ne l'aime pas ?<span class="faq-icon">+</span></button><div class="faq-a">30 jours pour changer d'avis. Nous organisons le ramassage et vous remboursons intégralement, sans question posée.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quelle garantie est fournie ?<span class="faq-icon">+</span></button><div class="faq-a">Garantie 2 ans sur la structure et la mousse. Notre équipe répond sous 24h ouvrées.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="section-cta-banner">
+  <h2>Votre salon vous appelle.<br>Répondez avec <em>Veluro</em>.</h2>
+  <p>Livraison offerte · 30 jours pour changer d'avis · Garantie 2 ans</p>
+  <button class="cta-big-btn" onclick="addToCart()">🛒 Commander maintenant</button>
+  <div class="cta-trust-row">
+    <span class="cta-trust-item">🚚 Livraison 3–5 jours</span>
+    <span class="cta-trust-item">↩️ 30J remboursé</span>
+    <span class="cta-trust-item">🔒 Paiement sécurisé</span>
+    <span class="cta-trust-item">⭐ 4,9/5 · 1 240 avis</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="footer-brand-logo">Veluro<span>.</span></div><p class="footer-brand-desc">Design sculptural pour les intérieurs qui refusent le générique. Fabriqué avec soin, livré avec passion.</p></div>
+      <div class="footer-col"><h4>Boutique</h4><ul><li><a href="#produit">Fauteuil Bulle</a></li><li><a href="#collection">Collection</a></li><li><a href="#avis">Avis clients</a></li></ul></div>
+      <div class="footer-col"><h4>Informations</h4><ul><li><a href="#">Livraison</a></li><li><a href="#">Retours</a></li><li><a href="#">Garantie 2 ans</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="#">Mentions légales</a></li><li><a href="#">CGV</a></li><li><a href="#">Confidentialité</a></li><li><a href="#">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Veluro. Tous droits réservés.</span>
+      <div class="footer-legal"><a href="#">CGV</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-hd"><span class="cart-hd-title">Mon Panier</span><button class="cart-close-btn" onclick="closeCart()">✕</button></div>
+  <div class="cart-urgency"><span class="fire">🔥</span> Prix réservé encore <strong id="cart-cd-display">02:47:33</strong></div>
+  <div class="cart-body">
+    <div class="cart-empty-state" id="cart-empty"><div class="empty-ico">🛒</div><h4>Votre panier est vide</h4><p>Ajoutez le Veluro Fauteuil Bulle pour commencer</p></div>
+    <div class="cart-items-list" id="cart-items" style="display:none"></div>
+  </div>
+  <div class="cart-ft" id="cart-ft" style="display:none">
+    <div class="cart-ft-reasur">
+      <span class="cart-ft-ri">🚚 Livraison offerte</span>
+      <span class="cart-ft-ri">🔒 Paiement sécurisé</span>
+      <span class="cart-ft-ri">↩️ 30J remboursé</span>
+    </div>
+    <div class="cart-total-row"><span class="cart-total-lbl">Total</span><span class="cart-total-val" id="cart-total">0,00€</span></div>
+    <p class="cart-ship-note">✅ Livraison internationale offerte incluse</p>
+    <button class="checkout-btn" id="checkout-btn" onclick="handleCheckout()">🔒 Procéder au paiement</button>
+    <p class="checkout-sub">Visa · Mastercard · PayPal · Apple Pay · Google Pay</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="toast-ico">✅</span><span id="toast-msg">Produit ajouté !</span></div>
+
+<script>
+// ================================================================
+// COLORIS DATA
+// ================================================================
+const COLORIS = [
+  { name:'Blanc Ivoire',      hex:'#F5F0E8', images:['images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg','images/2_e61fc718-d198-4016-9234-9c4a2a4a56e6.jpg','images/3_182008ee-e3df-48d0-b326-10bedf2c7b5f.jpg'] },
+  { name:'Bleu Océan',        hex:'#264493', images:['images/1_60242dbc-7ccc-44ec-8279-3f442f894a8b.webp','images/2_34c0a6ef-fd82-44d3-a52d-ee8270b0f32d.webp','images/3_88c79eaa-b00e-40b7-bbeb-0b5938a45532.webp'] },
+  { name:'Vert Sauge',        hex:'#4d713f', images:['images/1_89d6ccd8-eeeb-423c-9ed7-7f3885cb3746.jpg','images/2_1d27cb7a-02ce-4f63-9bdc-bb037589da58.jpg','images/3_dd16788e-380c-45ee-a1b1-fad56dadc67b.jpg'] },
+  { name:'Jaune Soleil',      hex:'#dcc825', images:['images/1_2c7f5fc6-cc2a-4eaf-8a4c-f1c15d8867f0.webp','images/2_9f4237c3-4f18-472e-89d9-f5b1fa5878a2.webp','images/3_dc0024e2-3145-49b0-be69-e92a4ec85c7c.webp'] },
+  { name:'Vert Forêt',        hex:'#1B4332', images:['images/1_6ddeb713-a461-4373-ad21-59469c8d11ae.webp','images/2_7b5000bf-614d-4e0d-a301-0759117cd24e.webp','images/3_da0f9d4d-2b26-4706-9483-e636970fac0e.webp'] },
+  { name:'Orange Terracotta', hex:'#dd651c', images:['images/1_65144f61-47c7-4dbe-b1c8-481a03db3848.webp','images/2_4ee2cf36-3927-4d6a-b4e1-0d4a8931a32f.webp','images/3_8e96b065-5b8a-4e2c-81e5-0f897508c029.webp'] },
+  { name:'Rouge Carmin',      hex:'#b2191b', images:['images/1_092fe042-a24d-4f73-b55c-f6fefc663777.webp','images/2_46912788-c1d1-46d7-b745-917c5512a44b.webp','images/3_e98e97a2-110a-41f0-81d5-b30de5847a9b.webp'] },
+  { name:'Rose Poudré',       hex:'#c0266b', images:['images/1_ffbffcc5-7e7d-4df3-8f7d-8c628b7a1075.webp','images/2_868e1abd-e46e-494a-b1d7-fe59331d726b.jpg','images/3_6effee2b-def1-4774-ae6d-bf2af334ffd2.webp'] },
+  { name:'Gris Anthracite',   hex:'#62605f', images:['images/1_206c2581-3c5d-431f-b1af-c65dc1f10cfd.jpg','images/2_615ade21-7b34-4218-a9da-eb500bb04795.jpg','images/3_637ed91e-0b88-4770-a7cd-d0af395d4098.jpg'] },
+  { name:'Gris Perle',        hex:'#b0b0b0', images:['images/1_af059685-99e4-492f-bc43-21eecaeed026.jpg','images/2_3c66f7a6-b55e-481b-aab9-934c8308c511.jpg','images/3_a6d56fdc-e35a-424c-b548-0b51fa2f2e80.jpg'] },
+  { name:'Bleu Ciel',         hex:'#98a5b2', images:['images/1_7c80a6a8-cdde-428e-afb3-bfc6f76614fe.jpg','images/2_89d118cd-01a0-4ad2-b675-fb2eeb864893.webp','images/3_d33b4940-f2ad-4c10-9e8f-2ee28420d7ef.jpg'] },
+  { name:'Bleu Nuit',         hex:'#2b385a', images:['images/1_f7360738-f595-4acb-a1ee-159885bcfca1.jpg','images/2_89d118cd-01a0-4ad2-b675-fb2eeb864893.webp','images/3_b7811df3-e20b-401c-8071-0f684bfc7918.jpg'] },
+];
+
+// ================================================================
+// STATE
+// ================================================================
+let cart = [];
+let currentColorIdx = 0;
+let bundle = { name:'Fauteuil Seul', price:49.90, was:79.90, qty:1 };
+// Coloris sélectionnés pour bundles multi
+// bundleColors[bundleNum][slotNum] = colorIdx
+const bundleColors = { 2: { 1:0, 2:0 }, 3: { 1:0, 2:0, 3:0 } };
+
+// ================================================================
+// INIT SWATCHES PRINCIPAL
+// ================================================================
+function initSwatches() {
+  const c = document.getElementById('swatches-container');
+  COLORIS.forEach((col, i) => {
+    const el = document.createElement('div');
+    el.className = 'swatch' + (i===0?' active':'');
+    el.style.background = col.hex;
+    el.setAttribute('title', col.name);
+    el.onclick = () => pickColor(i);
+    c.appendChild(el);
+  });
+}
+
+// ================================================================
+// INIT BUNDLE COLOR PICKERS (Duo & Trio)
+// ================================================================
+function initBundleColorPickers() {
+  // Bundles avec sélecteurs
+  [[2,[1,2]],[3,[1,2,3]]].forEach(([bNum, slots]) => {
+    slots.forEach(slot => {
+      const container = document.getElementById(`bcp-${bNum}-${slot}`);
+      if (!container) return;
+      COLORIS.forEach((col, i) => {
+        const el = document.createElement('div');
+        el.className = 'bcp-swatch' + (i===0?' active':'');
+        el.style.background = col.hex;
+        el.setAttribute('title', col.name);
+        el.onclick = (e) => {
+          e.stopPropagation(); // ne pas déclencher pickBundle
+          pickBundleColor(bNum, slot, i, el);
+        };
+        container.appendChild(el);
+      });
+      // Init label
+      document.getElementById(`bcp-${bNum}-${slot}-name`).textContent = COLORIS[0].name;
+    });
+  });
+}
+
+function pickBundleColor(bNum, slot, colorIdx, el) {
+  bundleColors[bNum][slot] = colorIdx;
+  // Update swatch actif dans ce groupe
+  const container = document.getElementById(`bcp-${bNum}-${slot}`);
+  container.querySelectorAll('.bcp-swatch').forEach((s,i) => s.classList.toggle('active', i===colorIdx));
+  // Update label
+  document.getElementById(`bcp-${bNum}-${slot}-name`).textContent = COLORIS[colorIdx].name;
+  // Update image du bundle card avec coloris du slot 1
+  if (slot === 1) {
+    const bImg = document.getElementById(`bundle-img-${bNum}`);
+    if (bImg) bImg.src = COLORIS[colorIdx].images[0];
+  }
+}
+
+// ================================================================
+// PICK COLOR PRINCIPAL → change galerie + bundle 1 + sync bundle 2&3 slot 1
+// ================================================================
+function pickColor(idx) {
+  currentColorIdx = idx;
+  const c = COLORIS[idx];
+
+  document.getElementById('sel-color').textContent = c.name;
+  document.querySelectorAll('#swatches-container .swatch').forEach((s,i) => s.classList.toggle('active', i===idx));
+
+  // Galerie
+  document.getElementById('main-img').src = c.images[0];
+  renderThumbs(c.images, 0);
+
+  // Bundle 1 suit le coloris principal
+  const b1 = document.getElementById('bundle-img-1');
+  if (b1) b1.src = c.images[0];
+
+  // Sync slot 1 des bundles 2 et 3 avec le coloris principal
+  [2,3].forEach(bNum => {
+    bundleColors[bNum][1] = idx;
+    const container = document.getElementById(`bcp-${bNum}-1`);
+    if (container) {
+      container.querySelectorAll('.bcp-swatch').forEach((s,i) => s.classList.toggle('active', i===idx));
+    }
+    const nameEl = document.getElementById(`bcp-${bNum}-1-name`);
+    if (nameEl) nameEl.textContent = c.name;
+    // Image bundle 2 & 3 slot 1
+    const bImg = document.getElementById(`bundle-img-${bNum}`);
+    if (bImg) bImg.src = c.images[0];
+  });
+}
+
+// ================================================================
+// GALLERY THUMBS
+// ================================================================
+function renderThumbs(images, activeIdx) {
+  const c = document.getElementById('gallery-thumbs');
+  c.innerHTML = '';
+  images.forEach((src, i) => {
+    const div = document.createElement('div');
+    div.className = 'thumb' + (i===activeIdx?' active':'');
+    div.onclick = () => { document.getElementById('main-img').src=src; c.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active')); div.classList.add('active'); };
+    const img = document.createElement('img'); img.src=src; img.alt=''; img.loading='lazy';
+    div.appendChild(img); c.appendChild(div);
+  });
+}
+
+// ================================================================
+// PICK BUNDLE
+// ================================================================
+function pickBundle(el, price, was, name, qty) {
+  document.querySelectorAll('.bundle-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  bundle = { name, price, was, qty };
+  document.getElementById('disp-price').textContent = price.toFixed(2).replace('.',',')+'€';
+  document.getElementById('disp-was').textContent = was.toFixed(2).replace('.',',')+'€';
+}
+
+// ================================================================
+// ADD TO CART
+// ================================================================
+function addToCart() {
+  const bNum = bundle.qty; // 1, 2 ou 3
+  if (bNum === 1) {
+    // Bundle simple
+    const c = COLORIS[currentColorIdx];
+    pushCart('Veluro Fauteuil Bulle — '+bundle.name, c.name, bundle.price, c.images[0]);
+  } else {
+    // Bundle multi : on ajoute chaque coloris séparément
+    const slots = bNum === 2 ? [1,2] : [1,2,3];
+    const pricePerUnit = bundle.price / bNum;
+    slots.forEach(slot => {
+      const cidx = bundleColors[bNum][slot];
+      const c = COLORIS[cidx];
+      pushCart('Veluro Fauteuil Bulle — '+bundle.name+' (F'+slot+')', c.name, pricePerUnit, c.images[0]);
+    });
+  }
+  renderCart(); updateCount();
+  showToast('Ajouté au panier !');
+  openCart();
+}
+
+function pushCart(name, color, price, img) {
+  const key = name+'|'+color;
+  const ex = cart.find(i => i.key===key);
+  if (ex) ex.qty++;
+  else cart.push({ key, name, color, price, qty:1, img });
+}
+
+// ================================================================
+// RENDER CART
+// ================================================================
+function getCartTotal() { return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+
+function updateQty(idx, d) {
+  cart[idx].qty += d;
+  if (cart[idx].qty <= 0) cart.splice(idx,1);
+  renderCart(); updateCount();
+}
+
+function renderCart() {
+  const empty=document.getElementById('cart-empty');
+  const items=document.getElementById('cart-items');
+  const ft=document.getElementById('cart-ft');
+  if (!cart.length) { empty.style.display='flex'; items.style.display='none'; ft.style.display='none'; return; }
+  empty.style.display='none'; items.style.display='block'; ft.style.display='block';
+  items.innerHTML = cart.map((it,i) => `
+    <div class="cart-li">
+      <div class="cart-li-img"><img src="${it.img}" alt="${it.name}"></div>
+      <div class="cart-li-info">
+        <div class="cart-li-name">${it.name}</div>
+        <div class="cart-li-variant">Coloris : ${it.color}</div>
+        <div class="cart-li-qty">
+          <button class="qty-btn" onclick="updateQty(${i},-1)">−</button>
+          <span class="qty-v">${it.qty}</span>
+          <button class="qty-btn" onclick="updateQty(${i},1)">+</button>
+        </div>
+      </div>
+      <div class="cart-li-price">${(it.price*it.qty).toFixed(2).replace('.',',')}€</div>
+    </div>`).join('');
+  document.getElementById('cart-total').textContent = getCartTotal().toFixed(2).replace('.',',')+'€';
+}
+
+function updateCount() {
+  const n = cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cart-count').textContent = n;
+}
+
+function openCart()  { document.getElementById('cart-overlay').classList.add('open'); document.getElementById('cart-drawer').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeCart() { document.getElementById('cart-overlay').classList.remove('open'); document.getElementById('cart-drawer').classList.remove('open'); document.body.style.overflow=''; }
+
+// ================================================================
+// CHECKOUT EXTERNE
+// ================================================================
+function handleCheckout() {
+  // Remplacez par votre script :
+  // window.location.href = 'https://checkout.veluro.fr';
+  // window.ShopiGate && window.ShopiGate.redirectToCheckout({ cart });
+  alert('Checkout externe — branchez votre script ici.\nTotal : '+getCartTotal().toFixed(2).replace('.',',')+'€');
+}
+
+// ================================================================
+// COUNTDOWN
+// ================================================================
+(function(){
+  let end = sessionStorage.getItem('vcd');
+  if (!end) { end = Date.now()+(2*3600+47*60+33)*1000; sessionStorage.setItem('vcd',end); }
+  end = parseInt(end);
+  function tick() {
+    const d = Math.max(0,end-Date.now());
+    const h = String(Math.floor(d/3600000)).padStart(2,'0');
+    const m = String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+    const s = String(Math.floor((d%60000)/1000)).padStart(2,'0');
+    ['cd-h','cd-m','cd-s'].forEach((id,i)=>{ const el=document.getElementById(id); if(el) el.textContent=[h,m,s][i]; });
+    const cd=document.getElementById('cart-cd-display'); if(cd) cd.textContent=h+':'+m+':'+s;
+    if(d>0) setTimeout(tick,1000);
+  }
+  tick();
+})();
+
+// ================================================================
+// FAQ
+// ================================================================
+function toggleFaq(btn) {
+  const item=btn.closest('.faq-item');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+
+// ================================================================
+// TOAST
+// ================================================================
+function showToast(msg) {
+  document.getElementById('toast-msg').textContent=msg;
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// ================================================================
+// INIT
+// ================================================================
+initSwatches();
+initBundleColorPickers();
+renderThumbs(COLORIS[0].images, 0);
+</script>
+</body>
+</html>
