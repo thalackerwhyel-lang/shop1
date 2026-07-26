@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veluro – Le Fauteuil Bulle | Design Sculptural & Confort Cocon</title>
+<meta name="description" content="Découvrez le Veluro Fauteuil Bulle — design sculptural, tissu 3D respirant, confort cocon. Livraison internationale offerte en 3 à 5 jours. Satisfait ou remboursé 30 jours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="veluro.css">
+</head>
+<body>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="mobile-nav-logo">Veluro<span>.</span></span>
+    <button class="mobile-nav-close" id="mobile-nav-close">✕</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="active"><span class="nav-emoji">🪑</span> Fauteuil Bulle</a>
+    <a href="sofa-3-places.html"><span class="nav-emoji">🛋️</span> Sofa 3 Places</a>
+    <a href="ottoman.html"><span class="nav-emoji">⬜</span> Ottoman</a>
+    <a href="#avis"><span class="nav-emoji">⭐</span> Avis clients</a>
+    <a href="#faq"><span class="nav-emoji">❓</span> FAQ</a>
+  </div>
+  <div class="mobile-nav-footer"><p>© 2025 Veluro — Design & Confort</p></div>
+</nav>
+
+<div class="announce-bar">
+  🚚 <strong>Livraison internationale offerte</strong> · Suivi en temps réel · 3 à 5 jours · <strong>Satisfait ou remboursé 30 jours</strong>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="logo">Veluro<span>.</span></a>
+    <ul class="desktop-nav">
+      <li><a href="index.html" class="active">Fauteuil</a></li>
+      <li><a href="sofa-3-places.html">Sofa 3 Places</a></li>
+      <li><a href="ottoman.html">Ottoman</a></li>
+    </ul>
+    <button class="cart-icon-btn" onclick="openCart()">
+      🛒 Panier <span class="cart-count-badge" id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ PRODUCT ============ -->
+<div class="product-wrap" id="produit">
+
+  <div class="gallery">
+    <div class="gallery-main-img">
+      <span class="sale-badge">Soldes −38%</span>
+      <img id="main-img" src="images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg" alt="Veluro Fauteuil Bulle">
+    </div>
+    <div class="gallery-thumbs" id="gallery-thumbs"></div>
+  </div>
+
+  <div class="product-info">
+    <span class="product-tag">Confort & Design</span>
+    <h1 class="product-title">Veluro Fauteuil Bulle</h1>
+
+    <div class="review-row">
+      <span class="stars">★★★★★</span>
+      <span class="review-text">Excellent · <a href="#avis">1 240 avis</a> Trustpilot</span>
+    </div>
+
+    <div class="price-row">
+      <span class="price-now" id="disp-price">49,90€</span>
+      <span class="price-was" id="disp-was">79,90€</span>
+      <span class="price-save-pill">Économisez 30,00€</span>
+    </div>
+    <p class="price-sub">Prix TTC · Livraison offerte</p>
+
+    <div class="stock-bar">
+      <span class="stock-dot"></span>
+      <span class="stock-text">Seulement <strong id="stock-count">9</strong> unités restantes — commandez avant rupture</span>
+    </div>
+
+    <div class="countdown-bar">
+      <span class="cd-label">⏳ L'offre expire dans</span>
+      <div class="cd-units">
+        <span class="cd-block" id="cd-h">02</span>
+        <span class="cd-sep">:</span>
+        <span class="cd-block" id="cd-m">47</span>
+        <span class="cd-sep">:</span>
+        <span class="cd-block" id="cd-s">33</span>
+      </div>
+    </div>
+
+    <!-- Coloris principal -->
+    <div>
+      <p class="opt-label">Coloris : <span id="sel-color">Blanc Ivoire</span></p>
+      <div class="swatches" id="swatches-container"></div>
+    </div>
+
+    <!-- Bundles -->
+    <div id="collection">
+      <p class="bundles-label">Choisissez votre configuration</p>
+      <div class="bundle-cards">
+
+        <!-- Bundle 1 : Fauteuil Seul -->
+        <div class="bundle-card selected" data-bundle="1" onclick="pickBundle(this,49.90,79.90,'Fauteuil Seul',1)">
+          <div class="bundle-card-top">
+            <div class="bundle-card-radio-col"><div class="bundle-radio-circle"></div></div>
+            <div class="bundle-card-img"><img id="bundle-img-1" src="images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg" alt="Fauteuil Seul"></div>
+            <div class="bundle-card-body">
+              <div class="bundle-card-name">Veluro Fauteuil Seul</div>
+              <div class="bundle-card-desc">1 fauteuil · coloris au choix</div>
+            </div>
+            <div class="bundle-card-price-col">
+              <div class="bundle-card-price-now">49,90€</div>
+              <div class="bundle-card-price-was">79,90€</div>
+            </div>
+          </div>
+          <!-- Pas de sélecteur supplémentaire pour le bundle 1 -->
+        </div>
+
+        <!-- Bundle 2 : Duo -->
+        <div class="bundle-card" data-bundle="2" onclick="pickBundle(this,89.90,149.80,'Duo de Fauteuils',2)">
+          <span class="bundle-card-badge">⭐ Populaire</span>
+          <div class="bundle-card-top">
+            <div class="bundle-card-radio-col"><div class="bundle-radio-circle"></div></div>
+            <div class="bundle-card-img"><img id="bundle-img-2" src="images/2_4ee2cf36-3927-4d6a-b4e1-0d4a8931a32f.webp" alt="Duo"></div>
+            <div class="bundle-card-body">
+              <div class="bundle-card-name">Veluro Duo de Fauteuils</div>
+              <div class="bundle-card-desc">2 fauteuils · coloris au choix</div>
+            </div>
+            <div class="bundle-card-price-col">
+              <div class="bundle-card-price-now">89,90€</div>
+              <div class="bundle-card-price-was">149,80€</div>
+            </div>
+          </div>
+          <!-- Sélecteur coloris pour les 2 fauteuils -->
+          <div class="bundle-color-picker" id="bcp-2">
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 1 :</span>
+              <div class="bcp-select-wrap">
+                <select class="bcp-select" id="bcp-2-1" onchange="onBcpChange(2,1,this)"></select>
+                <span class="bcp-select-wrap::after"></span>
+                <span class="bcp-color-dot" id="bcp-dot-2-1"></span>
+              </div>
+            </div>
+            <div class="bcp-row">
+              <span class="bcp-label">Fauteuil 2 :</span>
+              <div class="bcp-select-wrap">
+                <select class="bcp-select" id="bcp-2-2" onchange="onBcpChange(2,2,this)"></select>
+                <span class="bcp-color-dot" id="bcp-dot-2-2"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle 3 : Salon Complet -->
+        <div class="bundle-card" data-bundle="3" onclick="pickBundle(this,154.70,259.80,'Salon Complet',3)">
+          <span class="bundle-card-badge">🔥 Meilleure offre</span>
+          <div class="bundle-card-top">
+            <div class="bundle-card-radio-col"><div class="bundle-radio-circle"></div></div>
+            <div class="bundle-card-img"><img id="bundle-img-3" src="images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg" alt="Salon Complet"></div>
+            <div class="bundle-card-body">
+              <div class="bundle-card-name">Salon Complet Veluro</div>
+              <div class="bundle-card-desc">Fauteuil + Sofa 3 Places + Ottoman</div>
+            </div>
+            <div class="bundle-card-price-col">
+              <div class="bundle-card-price-now">154,70€</div>
+              <div class="bundle-card-price-was">259,80€</div>
+            </div>
+          </div>
+          <div class="bundle-complete">
+            <div class="bundle-complete-title">Votre salon complet</div>
+            <div class="bundle-products">
+              <div class="bundle-product-item">
+                <div class="bundle-product-img"><img id="bc3-img-fauteuil" src="images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg" alt="Fauteuil"></div>
+                <div class="bundle-product-name">Fauteuil<br>Bulle</div>
+                <select class="bundle-product-select" id="bc3-fauteuil" onchange="onBc3Change('fauteuil',this)"></select>
+                <div class="bundle-product-prices">
+                  <span class="bundle-product-price">49,90€</span>
+                  <span class="bundle-product-was">79,90€</span>
+                </div>
+              </div>
+              <div class="bundle-product-item">
+                <div class="bundle-product-img"><img id="bc3-img-sofa" src="images2/1_49313922-ed5e-4e73-9e68-3b0fe6fcdf74.jpg.png" alt="Sofa"></div>
+                <div class="bundle-product-name">Sofa<br>3 Places</div>
+                <select class="bundle-product-select" id="bc3-sofa" onchange="onBc3Change('sofa',this)"></select>
+                <div class="bundle-product-prices">
+                  <span class="bundle-product-price">69,90€</span>
+                  <span class="bundle-product-was">110,00€</span>
+                </div>
+              </div>
+              <div class="bundle-product-item">
+                <div class="bundle-product-img"><img id="bc3-img-ottoman" src="images3/SnowWhitecopy_91f4c73e-9f6e-4083-89a8-7492646d7f47.jpg" alt="Ottoman"></div>
+                <div class="bundle-product-name">Ottoman<br>Bulle</div>
+                <select class="bundle-product-select" id="bc3-ottoman" onchange="onBc3Change('ottoman',this)"></select>
+                <div class="bundle-product-prices">
+                  <span class="bundle-product-price">34,90€</span>
+                  <span class="bundle-product-was">69,90€</span>
+                </div>
+              </div>
+            </div>
+            <div class="bundle-total-row">
+              <span class="bundle-total-label">Total salon</span>
+              <span><span class="bundle-total-price">154,70€</span><span class="bundle-total-was">259,80€</span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bouton ATC unique -->
+    <button class="btn-atc" onclick="addToCart()">🛒 Ajouter au panier</button>
+
+    <div class="reasur-strip">
+      <div class="reasur-item"><div class="reasur-icon">🚚</div><div><div class="reasur-title">Livraison offerte</div><div class="reasur-sub">International · 3–5 jours</div></div></div>
+      <div class="reasur-item"><div class="reasur-icon">📍</div><div><div class="reasur-title">Suivi en temps réel</div><div class="reasur-sub">SMS + Email inclus</div></div></div>
+      <div class="reasur-item"><div class="reasur-icon">↩️</div><div><div class="reasur-title">30J satisfait ou remboursé</div><div class="reasur-sub">Sans questions</div></div></div>
+      <div class="reasur-item"><div class="reasur-icon">🔒</div><div><div class="reasur-title">Paiement sécurisé</div><div class="reasur-sub">SSL · 3D Secure</div></div></div>
+    </div>
+
+    <div class="pay-row">
+      <p>Paiement 100% sécurisé</p>
+      <div class="pay-icons">
+        <span class="pay-chip">VISA</span><span class="pay-chip">Mastercard</span><span class="pay-chip">AMEX</span>
+        <span class="pay-chip">PayPal</span><span class="pay-chip">Apple Pay</span>
+      </div>
+    </div>
+    <!-- Spacer mobile : évite que le bouton fixe masque le contenu -->
+    <div class="atc-spacer" style="display:none"></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section-features">
+  <div class="sw">
+    <p class="s-eyebrow">Construit dans chaque détail</p>
+    <h2 class="s-title">Ce que vous ressentez dès les premières secondes</h2>
+    <p class="s-sub">Quatre éléments que vous percevez au moment où vous vous installez.</p>
+    <div class="feat-grid">
+      <div class="feat-item"><div class="feat-icon-wrap">🧵</div><div><h3>Tissu 3D Polyamide Respirant</h3><p>Notre tissu Techno 3D mêle polyamide et polyester pour un rendu couture. Respirant et résistant, il épouse chaque courbe et reste confortable lors d'un usage quotidien intensif.</p></div></div>
+      <div class="feat-item"><div class="feat-icon-wrap">🫁</div><div><h3>Dossier Ergonomique Aligné</h3><p>Le dossier capitonné suit la courbure naturelle de votre colonne. Les accoudoirs arrondis répartissent la pression pour que les longues soirées ne vous laissent jamais raide.</p></div></div>
+      <div class="feat-item"><div class="feat-icon-wrap">🔵</div><div><h3>Silhouette Ronde Sculptée</h3><p>Chaque courbe est pensée pour un confort cocon. Le profil rond se sent généreux et accueillant dans n'importe quelle pièce — il s'intègre partout.</p></div></div>
+      <div class="feat-item"><div class="feat-icon-wrap">💎</div><div><h3>Mousse Mémoire Multi-Couches</h3><p>Des couches de mousse mémoire et de fibres élastiques délivrent un confort moelleux avec un vrai soutien. La structure conserve sa forme à chaque utilisation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section-comparison">
+  <div class="sw">
+    <p class="s-eyebrow">Veluro vs un canapé classique</p>
+    <h2 class="s-title">La différence se ressent dès le premier jour</h2>
+    <table class="comparison-tbl">
+      <thead><tr>
+        <th>Ce qui compte</th><th>✦ Veluro Fauteuil Bulle</th><th>Canapé ordinaire</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Confort</td><td><span class="ok">✓</span>Mousse bulle dense, cloud-soft des années</td><td><span class="ko">✗</span>S'affaisse en quelques mois</td></tr>
+        <tr><td>Design</td><td><span class="ok">✓</span>Silhouette sculpturale qui ancre la pièce</td><td><span class="ko">✗</span>Forme générique vue mille fois</td></tr>
+        <tr><td>Entretien</td><td><span class="ok">✓</span>Housses dézippables, lavage machine</td><td><span class="ko">✗</span>Nettoyage pro obligatoire</td></tr>
+        <tr><td>Livraison</td><td><span class="ok">✓</span>Colis compact, montage 10 min</td><td><span class="ko">✗</span>Deux personnes minimum</td></tr>
+        <tr><td>Matériaux</td><td><span class="ok">✓</span>Tissu premium, coutures cachées</td><td><span class="ko">✗</span>Coutures visibles qui s'effilochent</td></tr>
+        <tr><td>Usage quotidien</td><td><span class="ok">✓</span>Résistant enfants et animaux</td><td><span class="ko">✗</span>Impeccable jusqu'au premier renversement</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-process">
+  <div class="sw">
+    <p class="s-eyebrow">Simple, rapide, sans stress</p>
+    <h2 class="s-title">Votre Veluro en 3 étapes</h2>
+    <p class="s-sub">De la commande à votre salon.</p>
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><h3>Vous configurez</h3><p>Choisissez votre coloris et votre quantité directement sur la fiche produit.</p></div>
+      <div class="step"><div class="step-n">02</div><h3>Nous expédions</h3><p>Livraison suivie directement à votre porte en 3 à 5 jours ouvrés, partout dans le monde.</p></div>
+      <div class="step"><div class="step-n">03</div><h3>Vous profitez</h3><p>Sans outil, en moins de 10 minutes. Il ne reste plus qu'à s'y installer.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section-reviews" id="avis">
+  <div class="sw">
+    <p class="s-eyebrow">Ce qu'ils en pensent</p>
+    <h2 class="s-title">Ils ont choisi Veluro</h2>
+    <div class="rating-hero">
+      <div class="rating-num">4,9</div>
+      <div class="rating-info"><div class="stars">★★★★★</div><p>Basé sur 1 240+ avis vérifiés</p></div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Je l'ai acheté pour le design, honnêtement. Il s'avère être le siège le plus confortable de l'appartement."</p><div class="reviewer"><div class="reviewer-avatar">C</div><div><div class="reviewer-name">Camille L. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Paris · Blanc Ivoire</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Monté seul en moins de dix minutes. Les housses en machine, c'est ce qui m'a convaincu — avec deux chats, rien ne reste propre longtemps."</p><div class="reviewer"><div class="reviewer-avatar">T</div><div><div class="reviewer-name">Thomas R. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Lyon · Gris Anthracite</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"C'est le premier truc que chaque invité commente. L'emballage était impeccable, arrivé bien avant la fenêtre annoncée."</p><div class="reviewer"><div class="reviewer-avatar">S</div><div><div class="reviewer-name">Sophie M. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Bordeaux · Rose Poudré</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Trois mois après, aucun affaissement. La mousse revient vraiment à chaque fois — c'est ce qui avait tué mes deux derniers canapés."</p><div class="reviewer"><div class="reviewer-avatar">P</div><div><div class="reviewer-name">Pierre N. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Marseille · Bleu Océan</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Deux enfants, des collations en continu, une housse déjà lavée et elle ressort comme neuve."</p><div class="reviewer"><div class="reviewer-avatar">J</div><div><div class="reviewer-name">Julie O. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Nantes · Vert Sauge</div></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-body">"Le tissu donne une impression beaucoup plus chère que le prix. Les coutures sont cachées et rien n'a boulochné après des mois."</p><div class="reviewer"><div class="reviewer-avatar">N</div><div><div class="reviewer-name">Nora B. <span class="verified">✓ Achat vérifié</span></div><div class="reviewer-loc">Toulouse · Jaune Soleil</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-faq" id="faq">
+  <div class="sw">
+    <p class="s-eyebrow">Questions fréquentes</p>
+    <h2 class="s-title">Tout ce que vous voulez savoir</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Est-il aussi confortable qu'il en a l'air ?<span class="faq-icon">+</span></button><div class="faq-a">Oui. Une mousse haute densité sous un rembourrage bulle doux conserve sa forme tout en restant profond et moelleux comme un nuage.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quel est le délai de livraison ?<span class="faq-icon">+</span></button><div class="faq-a">3 à 5 jours ouvrés quelle que soit votre adresse. Livraison gratuite, suivi SMS et email inclus.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Comment nettoyer les housses ?<span class="faq-icon">+</span></button><div class="faq-a">Toutes les housses sont entièrement amovibles et lavables en machine à 30°C. Séchage à l'air libre, jamais au sèche-linge.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Le montage est-il compliqué ?<span class="faq-icon">+</span></button><div class="faq-a">Aucun outil nécessaire. Comptez moins de 10 minutes même seul.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Puis-je le retourner si je ne l'aime pas ?<span class="faq-icon">+</span></button><div class="faq-a">30 jours pour changer d'avis. Nous organisons le ramassage et vous remboursons intégralement, sans question posée.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quelle garantie est fournie ?<span class="faq-icon">+</span></button><div class="faq-a">Garantie 2 ans sur la structure et la mousse. Notre équipe répond sous 24h ouvrées.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="section-cta-banner">
+  <h2>Votre salon vous appelle.<br>Répondez avec <em>Veluro</em>.</h2>
+  <p>Livraison offerte · 30 jours pour changer d'avis · Garantie 2 ans</p>
+  <button class="cta-big-btn" onclick="addToCart()">🛒 Commander maintenant</button>
+  <div class="cta-trust-row">
+    <span class="cta-trust-item">🚚 Livraison 3–5 jours</span>
+    <span class="cta-trust-item">↩️ 30J remboursé</span>
+    <span class="cta-trust-item">🔒 Paiement sécurisé</span>
+    <span class="cta-trust-item">⭐ 4,9/5 · 1 240 avis</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="footer-brand-logo">Veluro<span>.</span></div><p class="footer-brand-desc">Design sculptural pour les intérieurs qui refusent le générique. Fabriqué avec soin, livré avec passion.</p></div>
+      <div class="footer-col"><h4>Boutique</h4><ul><li><a href="#produit">Fauteuil Bulle</a></li><li><a href="#collection">Collection</a></li><li><a href="#avis">Avis clients</a></li></ul></div>
+      <div class="footer-col"><h4>Informations</h4><ul><li><a href="#">Livraison</a></li><li><a href="#">Retours</a></li><li><a href="#">Garantie 2 ans</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="#">Mentions légales</a></li><li><a href="#">CGV</a></li><li><a href="#">Confidentialité</a></li><li><a href="#">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Veluro. Tous droits réservés.</span>
+      <div class="footer-legal"><a href="#">CGV</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-hd"><span class="cart-hd-title">Mon Panier</span><button class="cart-close-btn" onclick="closeCart()">✕</button></div>
+  <div class="cart-urgency"><span class="fire">🔥</span> Prix réservé encore <strong id="cart-cd-display">02:47:33</strong></div>
+  <div class="cart-body">
+    <div class="cart-empty-state" id="cart-empty"><div class="empty-ico">🛒</div><h4>Votre panier est vide</h4><p>Ajoutez le Veluro Fauteuil Bulle pour commencer</p></div>
+    <div class="cart-items-list" id="cart-items" style="display:none"></div>
+  </div>
+  <div class="cart-ft" id="cart-ft" style="display:none">
+    <div class="cart-ft-reasur">
+      <span class="cart-ft-ri">🚚 Livraison offerte</span>
+      <span class="cart-ft-ri">🔒 Paiement sécurisé</span>
+      <span class="cart-ft-ri">↩️ 30J remboursé</span>
+    </div>
+    <div class="cart-total-row"><span class="cart-total-lbl">Total</span><span class="cart-total-val" id="cart-total">0,00€</span></div>
+    <p class="cart-ship-note">✅ Livraison internationale offerte incluse</p>
+    <button class="checkout-btn" id="checkout-btn" onclick="handleCheckout()">🔒 Procéder au paiement</button>
+    <p class="checkout-sub">Visa · Mastercard · PayPal · Apple Pay</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="toast-ico">✅</span><span id="toast-msg">Produit ajouté !</span></div>
+
+<script>
+// ================================================================
+// COLORIS DATA — mapping vérifié par analyse couleur dominante
+// 4e image = dimensions (commune à tous les coloris)
+// ================================================================
+const DIM_IMG = 'images/Bubble-Sofa-Dimension-mobile-1.avif';
+
+const COLORIS = [
+  { name:'Blanc Ivoire',      hex:'#D8D5CF',
+    images:['images/1_53d7c3f1-f844-4260-9f95-11002ea92583.jpg','images/2_e61fc718-d198-4016-9234-9c4a2a4a56e6.jpg','images/3_182008ee-e3df-48d0-b326-10bedf2c7b5f.jpg',DIM_IMG] },
+  { name:'Bleu Océan',        hex:'#3a549c',
+    images:['images/1_60242dbc-7ccc-44ec-8279-3f442f894a8b.webp','images/2_34c0a6ef-fd82-44d3-a52d-ee8270b0f32d.webp','images/3_88c79eaa-b00e-40b7-bbeb-0b5938a45532.webp',DIM_IMG] },
+  { name:'Vert Sauge',        hex:'#5d7d51',
+    images:['images/1_89d6ccd8-eeeb-423c-9ed7-7f3885cb3746.jpg','images/2_1d27cb7a-02ce-4f63-9bdc-bb037589da58.jpg','images/3_dd16788e-380c-45ee-a1b1-fad56dadc67b.jpg',DIM_IMG] },
+  { name:'Jaune Soleil',      hex:'#decc38',
+    images:['images/1_2c7f5fc6-cc2a-4eaf-8a4c-f1c15d8867f0.webp','images/2_9f4237c3-4f18-472e-89d9-f5b1fa5878a2.webp','images/3_dc0024e2-3145-49b0-be69-e92a4ec85c7c.webp',DIM_IMG] },
+  { name:'Vert Forêt',        hex:'#6a9b5e',
+    images:['images/1_6ddeb713-a461-4373-ad21-59469c8d11ae.webp','images/2_7b5000bf-614d-4e0d-a301-0759117cd24e.webp','images/3_da0f9d4d-2b26-4706-9483-e636970fac0e.webp',DIM_IMG] },
+  { name:'Orange Terracotta', hex:'#df7231',
+    images:['images/1_65144f61-47c7-4dbe-b1c8-481a03db3848.webp','images/2_4ee2cf36-3927-4d6a-b4e1-0d4a8931a32f.webp','images/3_8e96b065-5b8a-4e2c-81e5-0f897508c029.webp',DIM_IMG] },
+  { name:'Rouge Carmin',      hex:'#b82e30',
+    images:['images/1_092fe042-a24d-4f73-b55c-f6fefc663777.webp','images/2_46912788-c1d1-46d7-b745-917c5512a44b.webp','images/3_e98e97a2-110a-41f0-81d5-b30de5847a9b.webp',DIM_IMG] },
+  { name:'Rose Poudré',       hex:'#c43977',
+    images:['images/1_ffbffcc5-7e7d-4df3-8f7d-8c628b7a1075.webp','images/1_ffbffcc5-7e7d-4df3-8f7d-8c628b7a1075.webp','images/3_6effee2b-def1-4774-ae6d-bf2af334ffd2.webp',DIM_IMG] },
+  { name:'Gris Anthracite',   hex:'#6f6e6d',
+    images:['images/1_206c2581-3c5d-431f-b1af-c65dc1f10cfd.jpg','images/2_615ade21-7b34-4218-a9da-eb500bb04795.jpg','images/3_637ed91e-0b88-4770-a7cd-d0af395d4098.jpg',DIM_IMG] },
+  { name:'Gris Perle',        hex:'#b6b6b6',
+    images:['images/1_af059685-99e4-492f-bc43-21eecaeed026.jpg','images/2_3c66f7a6-b55e-481b-aab9-934c8308c511.jpg','images/3_a6d56fdc-e35a-424c-b548-0b51fa2f2e80.jpg',DIM_IMG] },
+  { name:'Bleu Ciel',         hex:'#a0acb8',
+    images:['images/1_7c80a6a8-cdde-428e-afb3-bfc6f76614fe.jpg','images/1_7c80a6a8-cdde-428e-afb3-bfc6f76614fe.jpg','images/3_d33b4940-f2ad-4c10-9e8f-2ee28420d7ef.jpg',DIM_IMG] },
+  { name:'Bleu Nuit',         hex:'#3e4a68',
+    images:['images/1_f7360738-f595-4acb-a1ee-159885bcfca1.jpg','images/2_89d118cd-01a0-4ad2-b675-fb2eeb864893.webp','images/3_b7811df3-e20b-401c-8071-0f684bfc7918.jpg',DIM_IMG] },
+];
+
+// ================================================================
+// STATE
+// ================================================================
+let cart = [];
+let currentColorIdx = 0;
+let bundle = { name:'Fauteuil Seul', price:49.90, was:79.90, qty:1 };
+// Coloris sélectionnés pour bundles multi
+// bundleColors[bundleNum][slotNum] = colorIdx
+const bundleColors = { 2: { 1:0, 2:0 }, 3: { 1:0, 2:0, 3:0 } };
+
+// ================================================================
+// INIT SWATCHES PRINCIPAL
+// ================================================================
+function initSwatches() {
+  const c = document.getElementById('swatches-container');
+  COLORIS.forEach((col, i) => {
+    const el = document.createElement('div');
+    el.className = 'swatch' + (i===0?' active':'');
+    el.setAttribute('title', col.name);
+    el.onclick = () => pickColor(i);
+    // Image miniature du fauteuil dans la bonne couleur
+    const img = document.createElement('img');
+    img.src = col.images[0];
+    img.alt = col.name;
+    img.loading = 'lazy';
+    el.appendChild(img);
+    c.appendChild(el);
+  });
+}
+
+// ================================================================
+// INIT BUNDLE COLOR PICKERS
+// ================================================================
+const SOFA_COLORIS = [
+  {name:'Blanc Neige',img:'images2/1_49313922-ed5e-4e73-9e68-3b0fe6fcdf74.jpg.png'},
+  {name:'Bleu Océan',img:'images2/1_bc05c986-a6c7-405f-aa86-80f266f40950.webp'},
+  {name:'Vert Sauge',img:'images2/1_f5d23f63-99ca-42b9-bac4-1383c81ff9be.webp'},
+  {name:'Jaune Soleil',img:'images2/1_4b6b8c69-e1d4-4be8-8370-123e9b4d06d1.webp'},
+  {name:'Vert Forêt',img:'images2/1_bb071b89-2f30-43fa-aa7e-bff8f011e011.webp'},
+  {name:'Orange Terracotta',img:'images2/1_af07a365-7c42-4ce0-afa8-84d55a69a443.webp'},
+  {name:'Rouge Carmin',img:'images2/1_0f26761f-df87-41ef-bee7-9fa8678b6a15.webp'},
+  {name:'Rose Poudré',img:'images2/1_9c7dc2fd-b948-492b-98ab-ee91b6d27d5a.webp'},
+  {name:'Gris Anthracite',img:'images2/1_d407bd07-83a9-4c81-b61f-720d257e7d31.webp'},
+  {name:'Gris Perle',img:'images2/1_a4562632-6fec-490a-a8c6-cfd45831d5c8.jpg'},
+  {name:'Bleu Ciel',img:'images2/1_f256d588-dd59-443b-9dc2-0412fb025f70.webp'},
+  {name:'Bleu Nuit',img:'images2/1_da0a0622-f77d-4e33-89da-018f0370f439.webp'},
+];
+const OTTOMAN_COLORIS = [
+  {name:'Blanc Neige',img:'images3/SnowWhitecopy_91f4c73e-9f6e-4083-89a8-7492646d7f47.jpg'},
+  {name:'Bleu Cobalt',img:'images3/CobaltBluecopy_04658753-9d11-4447-9d70-b1292005e120.webp'},
+  {name:'Jaune Cèdre',img:'images3/CedreYellowcopy_15fb49a5-5077-451f-b60e-dc1d312bcec4.webp'},
+  {name:'Vert Topazo',img:'images3/TopazeGreencopy_ee5364b4-16f5-4d88-8010-1b8ba42b1b9e.webp'},
+  {name:'Orange',img:'images3/Orangecopy_e41867a6-1bb5-4dbb-aff2-a6b08ef6ff27.webp'},
+  {name:'Rouge',img:'images3/RubyRedcopy_3b2b6751-cfec-431a-b48f-e1ec4563c1ba.webp'},
+  {name:'Fuchsia',img:'images3/Fuchsiacopy_4d8a9b6b-65b8-4496-b97b-04d8ec2d8ab9.webp'},
+  {name:'Gris Basalte',img:'images3/BasalteGraycopy_1bd36f9d-dd4f-4d2f-a52d-9f0a6dda8769.jpg'},
+  {name:'Gris',img:'images3/Graycopy_7af23ff3-757d-456d-9e96-00d8a7c3946c.jpg'},
+  {name:'Bleu Zéphyr',img:'images3/BluZeffirocopy_1d1b63c8-9214-4bdf-b8b9-2fc6278f0a70.webp'},
+  {name:'Aquamarine',img:'images3/AcquaMarinacopy_36b8c81a-87b9-46b1-a437-2664da6ef3de.jpg'},
+  {name:'Vert Jade',img:'images3/VerdeGiadacopy_145fe3db-6fda-40a4-a56d-90390101468c.avif'},
+];
+
+function initBundleColorPickers() {
+  // Bundle 2 : selects fauteuil x2
+  [[2,[1,2]]].forEach(([bNum, slots]) => {
+    slots.forEach(slot => {
+      const sel = document.getElementById(`bcp-${bNum}-${slot}`);
+      if (!sel) return;
+      COLORIS.forEach((col, i) => {
+        const opt = document.createElement('option');
+        opt.value = i; opt.textContent = col.name;
+        sel.appendChild(opt);
+      });
+      updateBcpDot(bNum, slot, 0);
+    });
+  });
+  // Bundle 3 : selects Fauteuil / Sofa / Ottoman
+  ['bc3-fauteuil','bc3-sofa','bc3-ottoman'].forEach((id, pi) => {
+    const sel = document.getElementById(id);
+    if (!sel) return;
+    const list = pi===0 ? COLORIS : pi===1 ? SOFA_COLORIS : OTTOMAN_COLORIS;
+    list.forEach((col, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = col.name;
+      sel.appendChild(opt);
+    });
+  });
+}
+
+function onBc3Change(prod, sel) {
+  const idx = parseInt(sel.value);
+  const list = prod==='fauteuil' ? COLORIS : prod==='sofa' ? SOFA_COLORIS : OTTOMAN_COLORIS;
+  const imgEl = document.getElementById(`bc3-img-${prod}`);
+  if (imgEl) imgEl.src = list[idx].images ? list[idx].images[0] : list[idx].img;
+}
+
+function onBcpChange(bNum, slot, selectEl) {
+  const idx = parseInt(selectEl.value);
+  bundleColors[bNum][slot] = idx;
+  updateBcpDot(bNum, slot, idx);
+  // Image bundle suit le slot 1
+  if (slot === 1) {
+    const bImg = document.getElementById(`bundle-img-${bNum}`);
+    if (bImg) bImg.src = COLORIS[idx].images[0];
+  }
+}
+
+function updateBcpDot(bNum, slot, colorIdx) {
+  const dot = document.getElementById(`bcp-dot-${bNum}-${slot}`);
+  if (dot) dot.style.background = COLORIS[colorIdx].hex;
+}
+
+// ================================================================
+// PICK COLOR PRINCIPAL → change galerie + bundle 1 + sync bundle 2&3 slot 1
+// ================================================================
+function pickColor(idx) {
+  currentColorIdx = idx;
+  const c = COLORIS[idx];
+
+  document.getElementById('sel-color').textContent = c.name;
+  document.querySelectorAll('#swatches-container .swatch').forEach((s,i) => s.classList.toggle('active', i===idx));
+
+  // Mise à jour stock
+  updateStockDisplay(idx);
+
+  // Galerie
+  document.getElementById('main-img').src = c.images[0];
+  renderThumbs(c.images, 0);
+
+  // Bundle 1 suit le coloris principal
+  const b1 = document.getElementById('bundle-img-1');
+  if (b1) b1.src = c.images[0];
+
+  // Sync slot 1 du bundle 2 avec le coloris principal
+  [2].forEach(bNum => {
+    bundleColors[bNum][1] = idx;
+    const sel = document.getElementById(`bcp-${bNum}-1`);
+    if (sel) sel.value = idx;
+    updateBcpDot(bNum, 1, idx);
+    const bImg = document.getElementById(`bundle-img-${bNum}`);
+    if (bImg) bImg.src = c.images[0];
+  });
+  // Sync image bundle 3 avec le fauteuil sélectionné
+  const b3img = document.getElementById('bundle-img-3');
+  if (b3img) b3img.src = c.images[0];
+  const bc3f = document.getElementById('bc3-fauteuil');
+  if (bc3f) { bc3f.value = idx; }
+  const bc3fimg = document.getElementById('bc3-img-fauteuil');
+  if (bc3fimg) bc3fimg.src = c.images[0];
+}
+
+// ================================================================
+// GALLERY THUMBS
+// ================================================================
+function renderThumbs(images, activeIdx) {
+  const c = document.getElementById('gallery-thumbs');
+  c.innerHTML = '';
+  images.forEach((src, i) => {
+    const div = document.createElement('div');
+    div.className = 'thumb' + (i===activeIdx?' active':'');
+    div.onclick = () => { document.getElementById('main-img').src=src; c.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active')); div.classList.add('active'); };
+    const img = document.createElement('img'); img.src=src; img.alt=''; img.loading='lazy';
+    div.appendChild(img); c.appendChild(div);
+  });
+}
+
+// ================================================================
+// PICK BUNDLE
+// ================================================================
+function pickBundle(el, price, was, name, qty) {
+  document.querySelectorAll('.bundle-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  bundle = { name, price, was, qty };
+  document.getElementById('disp-price').textContent = price.toFixed(2).replace('.',',')+'€';
+  document.getElementById('disp-was').textContent = was.toFixed(2).replace('.',',')+'€';
+}
+
+// ================================================================
+// ADD TO CART
+// ================================================================
+function addToCart() {
+  const bNum = bundle.qty;
+  if (bNum === 1) {
+    const c = COLORIS[currentColorIdx];
+    pushCart('Veluro Fauteuil Bulle', c.name, bundle.price, c.images[0]);
+  } else if (bNum === 2) {
+    [1,2].forEach(slot => {
+      const c = COLORIS[bundleColors[2][slot]];
+      pushCart('Veluro Fauteuil Bulle (x2) — F'+slot, c.name, bundle.price/2, c.images[0]);
+    });
+  } else {
+    // Bundle 3 : Salon Complet — 3 produits différents
+    const fIdx = parseInt(document.getElementById('bc3-fauteuil')?.value||0);
+    const sIdx = parseInt(document.getElementById('bc3-sofa')?.value||0);
+    const oIdx = parseInt(document.getElementById('bc3-ottoman')?.value||0);
+    const fC = COLORIS[fIdx];
+    const sC = SOFA_COLORIS[sIdx];
+    const oC = OTTOMAN_COLORIS[oIdx];
+    pushCart('Veluro Fauteuil Bulle', fC.name, 49.90, fC.images[0]);
+    pushCart('Veluro Sofa 3 Places', sC.name, 69.90, sC.img);
+    pushCart('Veluro Ottoman Bulle', oC.name, 34.90, oC.img);
+  }
+  renderCart(); updateCount();
+  showToast('Ajouté au panier !');
+  openCart();
+}
+
+function pushCart(name, color, price, img) {
+  const key = name+'|'+color;
+  const ex = cart.find(i => i.key===key);
+  if (ex) ex.qty++;
+  else cart.push({ key, name, color, price, qty:1, img });
+}
+
+// ================================================================
+// RENDER CART
+// ================================================================
+function getCartTotal() { return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+
+function updateQty(idx, d) {
+  cart[idx].qty += d;
+  if (cart[idx].qty <= 0) cart.splice(idx,1);
+  renderCart(); updateCount();
+}
+
+function renderCart() {
+  const empty=document.getElementById('cart-empty');
+  const items=document.getElementById('cart-items');
+  const ft=document.getElementById('cart-ft');
+  if (!cart.length) { empty.style.display='flex'; items.style.display='none'; ft.style.display='none'; return; }
+  empty.style.display='none'; items.style.display='block'; ft.style.display='block';
+  items.innerHTML = cart.map((it,i) => `
+    <div class="cart-li">
+      <div class="cart-li-img"><img src="${it.img}" alt="${it.name}"></div>
+      <div class="cart-li-info">
+        <div class="cart-li-name">${it.name}</div>
+        <div class="cart-li-variant">Coloris : ${it.color}</div>
+        <div class="cart-li-qty">
+          <button class="qty-btn" onclick="updateQty(${i},-1)">−</button>
+          <span class="qty-v">${it.qty}</span>
+          <button class="qty-btn" onclick="updateQty(${i},1)">+</button>
+        </div>
+      </div>
+      <div class="cart-li-price">${(it.price*it.qty).toFixed(2).replace('.',',')}€</div>
+    </div>`).join('');
+  document.getElementById('cart-total').textContent = getCartTotal().toFixed(2).replace('.',',')+'€';
+}
+
+function updateCount() {
+  const n = cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cart-count').textContent = n;
+}
+
+function openCart()  { document.getElementById('cart-overlay').classList.add('open'); document.getElementById('cart-drawer').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeCart() { document.getElementById('cart-overlay').classList.remove('open'); document.getElementById('cart-drawer').classList.remove('open'); document.body.style.overflow=''; }
+
+// ================================================================
+// CHECKOUT EXTERNE
+// ================================================================
+function handleCheckout() {
+  // Remplacez par votre script :
+  // window.location.href = 'https://checkout.veluro.fr';
+  // window.ShopiGate && window.ShopiGate.redirectToCheckout({ cart });
+  alert('Checkout externe — branchez votre script ici.\nTotal : '+getCartTotal().toFixed(2).replace('.',',')+'€');
+}
+
+// ================================================================
+// STOCK PAR COLORIS — varie entre 7 et 12, pas tous identiques
+// ================================================================
+const STOCK_PAR_COLORIS = [9, 12, 7, 11, 8, 12, 7, 10, 9, 11, 8, 7];
+
+function updateStockDisplay(colorIdx) {
+  const n = STOCK_PAR_COLORIS[colorIdx] || 9;
+  const el = document.getElementById('stock-count');
+  if (el) el.textContent = n;
+}
+
+// ================================================================
+// COUNTDOWN — expire à minuit chaque jour
+// ================================================================
+(function(){
+  function getMidnightEnd() {
+    const now = new Date();
+    const midnight = new Date(now);
+    midnight.setHours(24, 0, 0, 0); // prochain minuit
+    return midnight.getTime();
+  }
+
+  // Clé du jour pour reset chaque jour
+  const todayKey = new Date().toDateString();
+  const savedKey = sessionStorage.getItem('vcd_day');
+  if (savedKey !== todayKey) {
+    sessionStorage.removeItem('vcd_end');
+    sessionStorage.setItem('vcd_day', todayKey);
+  }
+
+  const end = getMidnightEnd();
+
+  function tick() {
+    const d = Math.max(0, end - Date.now());
+    const h = String(Math.floor(d / 3600000)).padStart(2,'0');
+    const m = String(Math.floor((d % 3600000) / 60000)).padStart(2,'0');
+    const s = String(Math.floor((d % 60000) / 1000)).padStart(2,'0');
+    ['cd-h','cd-m','cd-s'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = [h, m, s][i];
+    });
+    const cd = document.getElementById('cart-cd-display');
+    if (cd) cd.textContent = h + ':' + m + ':' + s;
+    if (d > 0) setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+// ================================================================
+// FAQ
+// ================================================================
+function toggleFaq(btn) {
+  const item=btn.closest('.faq-item');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+
+// ================================================================
+// TOAST
+// ================================================================
+function showToast(msg) {
+  document.getElementById('toast-msg').textContent=msg;
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// ================================================================
+// INIT
+// ================================================================
+initSwatches();
+initBundleColorPickers();
+renderThumbs(COLORIS[0].images, 0);
+updateStockDisplay(0);
+
+// Init images bundles sur coloris 0
+['bundle-img-1','bundle-img-2','bundle-img-3'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.src = COLORIS[0].images[0];
+});
+// Sync bundle 2 selects sur coloris 0
+if (bundleColors[2]) {
+  Object.keys(bundleColors[2]).forEach(slot => {
+    bundleColors[2][slot] = 0;
+    const sel = document.getElementById(`bcp-2-${slot}`);
+    if (sel) sel.value = 0;
+    updateBcpDot(2, parseInt(slot), 0);
+  });
+}
+</script>
+<script src="veluro-shared.js"></script>
+</body>
+</html>
